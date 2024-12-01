@@ -1,0 +1,65 @@
+body{
+    font-family: 'Poppins';
+}
+.progress-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #28282B;
+    letter-spacing: 1px;
+    margin-bottom: -2px;
+}
+
+h3{
+    font-size: 1rem;
+    color: 	#38966D;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+h6 {
+    font-size: 0.8rem;
+}
+.progress-circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Ensures circular shape */
+    background: conic-gradient(#38966D 0% 0%, transparent 0% 100%);
+}
+
+.circle {
+    position: absolute;
+    width: 105px; /* Adjust this to control the hole size */
+    height: 105px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Matches the background color */
+    border-radius: 50%; /* Creates the circular cut-out */
+    z-index: 1;
+}
+
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Ensures the text appears above the hole */
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
