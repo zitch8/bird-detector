@@ -1,5 +1,5 @@
 from inference_sdk import InferenceHTTPClient
-from flask import Flask, Response, request, jsonify
+from flask import Flask, Response, render_template, request, jsonify
 import json
 import base64
 
@@ -18,6 +18,8 @@ client = InferenceHTTPClient(
 )
 
 app = Flask(__name__)
+app.config["TEMPLATES_AUTO_RELOAD"] = True
+
 @app.route('/', methods=['POST', 'GET'])
 def classify():
     file = request.files['image']
@@ -33,6 +35,11 @@ def classify():
         )
         five_predictions = result[0]['model_predictions']['predictions']['predictions'][:5]
         return jsonify(five_predictions)
+    
+app.route('/index', methods=['POST', 'GET'])
+def index():
+    return render_template("index.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
