@@ -1,5 +1,6 @@
 from inference_sdk import InferenceHTTPClient
 from flask import Flask, Response, render_template, request, jsonify
+from flask_cors import CORS
 import json
 import base64
 
@@ -18,6 +19,7 @@ client = InferenceHTTPClient(
 )
 
 app = Flask(__name__)
+CORS(app)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route('/', methods=['POST', 'GET'])

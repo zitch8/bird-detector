@@ -1,0 +1,135 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+.image-search-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.dotted-border {
+    border: 2px dashed #ced4da;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+.dotted-border:hover {
+    background-color: #f1f3f5;
+}
+.dotted-border.disabled {
+    cursor: default;
+    background-color: #f8f9fa !important;
+}
+.helper-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+.preview-container {
+    position: relative;
+    display: none;
+}
+.preview-container img {
+    max-height: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background-color: #c82333;
+}
+.fa-image {
+    font-size: 2rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+.btn {
+    width: 80px;
+    font-size: smaller;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #28282B;
+    letter-spacing: 1px;
+    margin-bottom: -2px;
+}
+
+h3{
+    font-size: 1rem;
+    color: 	#38966D;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+h6 {
+    font-size: 0.8rem;
+}
+.progress-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Ensures circular shape */
+    background: conic-gradient(#38966D 0% 0%, transparent 0% 100%);
+}
+
+.circle {
+    position: absolute;
+    width: 105px; /* Adjust this to control the hole size */
+    height: 105px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Matches the background color */
+    border-radius: 50%; /* Creates the circular cut-out */
+    z-index: 1;
+}
+
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Ensures the text appears above the hole */
+}
+
+#loading-spinner {
+    display: none;
+}
